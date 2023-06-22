@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <title>Viewport实验-设置viewport</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+body {
+  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+  margin: 0;
+  padding: 1em;
+  background-image: url('images/checker.png');
+}
+
+* {
+  box-sizing: border-box;
+  /* 禁用 font boosting */
+  max-height: 1000000px;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+}
+
+article {
+  width: 100%;
+  color: #ccc;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 10px;
+  border-radius: 4px;
+}
+
+b {
+  color: #fff;
+}
+    </style>
+  </head>
+  <body>
+    <article>
+      <h1><code>viewport</code> 设置</h1>
+
+      <p>此页面 <b>设置了</b> <code>meta viewport</code></p>
+
+      <p>
+        这是一个测试，用于测试<code>meta viewport</code>标签如何影响页面。为了尽可能简化此示例，字体增强功能已被禁用。
+      </p>
+
+      <p><b>注意:</b> 背景上的每个框的宽度均为50px。</p>
+    </article>
+  </body>
+</html>

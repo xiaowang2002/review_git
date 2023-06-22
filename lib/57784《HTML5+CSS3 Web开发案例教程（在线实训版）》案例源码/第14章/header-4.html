@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="bootstrap-icons.css">
+  <link rel="stylesheet" href="header-1.css">
+  <link rel="stylesheet" href="header-2.css">
+  <link rel="stylesheet" href="header-3.css">
+  <link rel="stylesheet" href="header-4.css">
+  <link rel="stylesheet" href="header-5.css">
+  <link rel="stylesheet" href="header-6.css">
+  <title>仿苹果公司官网响应式页头-移动端</title>
+
+</head>
+<body>
+
+  <header class="header">
+    <nav class="menu-wrap">
+      <!--搜索框-->
+      <div class="search-box" style="display: none;">
+        <div class="search-wrap">
+          <input placeholder="请输入关键词" type="text" autocomplete="off">
+          <span class="search-wrap-icon bi-search"></span>
+          <span class="search-wrap-icon bi-x"></span>
+        </div>
+      </div>
+      <div class="menu">
+        <!--左侧菜单指示性图标-->
+        <div class="menu-icon-left">
+          <span class="bi-list"></span>
+        </div>
+        <!--左侧菜单-->
+        <div class="left-menu">
+          <div class="logo"></div>
+          <div class="menu-list-wrap">
+            <div class="indicator left"></div>
+            <ul class="menu-list">
+              <li class="nav-home active"><a href="javascript:void(0);" class="">首页</a></li>
+              <li class=""><a href="javascript:void(0);" class=""> 马克杯 </a></li>
+              <li class=""><a href="javascript:void(0);" class=""> 啤酒杯 </a></li>
+              <li class=""><a href="javascript:void(0);" class=""> 搪瓷杯 </a></li>
+              <li class=""><a href="javascript:void(0);" class="">杯言杯语</a></li>
+              <li class=""><a href="javascript:void(0);" class="">极客范儿</a></li>
+            </ul>
+          </div>
+        </div>
+        <!--右侧菜单-->
+        <div class="right-menu">
+          <div class="indicator right"></div>
+          <ul class="menu-list">
+            <li class="bi-search"></li>
+            <li class="cart-icon"><span class="bi-cart2"><i class="cart-num"> 2 </i></span></li>
+            <li class="bi-heart"><i class="wish-num"> 1 </i></li>
+            <li class="bi-box-seam"></li>
+            <li class="bi-person"></li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+<script>
+function showSearchHandler() {
+  document.querySelector('.header .menu').style.display = 'none';
+  document.querySelector('.header .search-box').style.display = 'block';
+}
+function hideSearchHandler() {
+  document.querySelector('.header .menu').style.display = null;
+  document.querySelector('.header .search-box').style.display = 'none';
+}
+
+document.querySelector(".right-menu .bi-search")
+  .addEventListener("click", showSearchHandler);
+
+document.querySelector(".search-box .bi-x")
+  .addEventListener("click", hideSearchHandler);
+
+var dropdownMenu = 'none';
+function toggleLeftMenuHanlder() {
+  var wrap = document.querySelector(".left-menu .menu-list-wrap");
+  var icon = document.querySelector(".menu-icon-left span");
+  if (dropdownMenu == 'left') {
+    dropdownMenu = 'none';
+    icon.className = 'bi-list';
+    wrap.classList.remove('show');
+  } else {
+    dropdownMenu = 'left';
+    icon.className = 'bi-x';
+    wrap.classList.add('show');
+  }
+}
+document.querySelector(".menu-icon-left")
+  .addEventListener("click", toggleLeftMenuHanlder);
+
+</script>
+
+</body>
+</html>

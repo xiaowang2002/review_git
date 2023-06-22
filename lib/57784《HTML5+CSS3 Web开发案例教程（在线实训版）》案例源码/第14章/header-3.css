@@ -1,0 +1,19 @@
+.header .right-menu li {
+  position: relative;
+  font-size: 24px; /*图标变大一点*/
+}
+
+.header .cart-num,
+.header .wish-num {
+  position: absolute; /*使用绝对定位，显示在图标的右上角*/
+  right: 5px;
+  top: 2px;
+  padding: 0 6px;
+  height: 19px;
+  line-height: 19px;
+  border-radius: 10px; /*使用圆形*/
+  background-color: #df3028;
+  font-size: 12px;
+  color: #fff;
+  font-style: normal;
+}

@@ -1,0 +1,259 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Libre Franklin",Helvetica,Arial,sans-serif!important;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.7;
+  padding-right: 0!important;
+}
+ul, ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  color: #888;
+  text-decoration: none;
+}
+.header .menu {
+  display: flex;        /*设为flex布局*/
+  align-items: center;  /*垂直居中对齐*/
+  justify-content: space-between; /*水平方向两端对齐*/
+}
+.header .left-menu {
+  display: flex;
+  align-items: center;
+}
+.header .menu-list li {
+  padding: 0 10px;
+  display: inline-block;  /*每个li设成行内元素*/
+  cursor: pointer;        /*设置鼠标样式为指针*/
+}
+.header {
+  position: fixed; /*header固定在顶部*/
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 100px;
+  padding: 26px 15px;
+  background-color: #fff;
+  box-shadow: 0 2px 12px hsla(0, 0%, 52.9%, 0.1); /*加一些阴影效果*/
+}
+
+.header .menu .logo {
+  background: url(images/logo.png) no-repeat;
+  width: 125px;
+  height: 47px;
+  margin: 0 10px;
+}
+.header .right-menu li {
+  position: relative;
+  font-size: 24px; /*图标变大一点*/
+}
+
+.header .cart-num,
+.header .wish-num {
+  position: absolute; /*使用绝对定位，显示在图标的右上角*/
+  right: 5px;
+  top: 2px;
+  padding: 0 6px;
+  height: 19px;
+  line-height: 19px;
+  border-radius: 10px; /*使用圆形*/
+  background-color: #df3028;
+  font-size: 12px;
+  color: #fff;
+  font-style: normal;
+}
+.header .search-box {
+  padding: 0 60px;
+}
+.header .search-wrap {
+  position: relative;
+  height: 60px;
+  width: 100%;
+}
+.header .search-wrap input {
+  display: block;
+  width: 100%;
+  padding: 0 60px;
+  font-size: 14px;
+  color: #888;
+  min-height: 60px;
+  line-height: 1.5;
+  background-color: #f8f8f8;
+  border: 1px solid #f8f8f8;
+}
+.header .search-wrap .search-wrap-icon {
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+.header .search-wrap .search-wrap-icon.bi-search {
+  left: 20px;
+  font-size: 20px;
+}
+.header .search-wrap .search-wrap-icon.bi-x {
+  right: 20px;
+  font-size: 28px;
+}
+.header .search-wrap input:focus {
+  color: #212529;
+  border-color: #86b7fe;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+@media (max-width: 1024px) {
+  .body {
+    font-size: 16px;          /*调小字号*/
+  }
+  .header .menu .nav-home{
+    display: none !important; /*隐藏首页链接*/
+  }
+  .header .menu .logo {
+    background: url(images/logo-mini.png) no-repeat; /*替换Logo*/
+    width: 35px;
+    height: 35px;
+    background-size: contain;
+    background-position: 50%;
+  }
+}
+.header .menu .menu-icon-left {
+  display: none; /*指示性图标在非手机端默认隐藏*/
+}
+@media (max-width: 768px) {
+  .body {
+    font-size: 14px;
+  }
+  .header {
+    height: 60px;
+    padding: 0 15px;
+  }
+  .header .menu-wrap, .header .menu {
+    height: 100%;
+  }
+  .header .menu .menu-icon-left {
+    display: block; /*指示性图标在手机端默认显示*/
+    font-size: 28px;
+  }
+  .header .menu .left-menu .menu-list-wrap {
+    display: none;      /*左侧菜单默认隐藏*/
+    position: absolute; /*使用绝对定位，显示在图标下方*/
+    top: 60px;
+    left: 0;
+    right: 0;
+    border-top: 1px solid #d2d2d7;
+    background: #fff;
+    padding: 0 25px;
+    transition: all 1s ease-out;
+  }
+  .header .menu .left-menu .menu-list-wrap.show {
+    display: block;
+  }
+  .header .menu .left-menu .menu-list li {
+    display: block;
+    line-height: 44px;
+    border-top: 1px solid #d2d2d7;
+    cursor: pointer;
+    padding: 0;
+  }
+  .header .menu .left-menu .menu-list li:nth-child(2) {
+    border-top: none;
+  }
+  .header .menu .left-menu .menu-list li a {
+    display: block; /*让点击区域占满整行，体验更好，否则只能点击文字，空白部分不能点击*/
+  }
+  .header .menu .indicator { /*图标下方的小三角型*/
+    display: block;
+    position: absolute;
+    background: #fff;
+    height: 10px;
+    width: 10px;
+    transform: rotate(45deg);
+    top: -6px;
+    border-top: 1px solid #d2d2d7;
+    border-left: 1px solid #d2d2d7;
+  }
+  .header .menu .indicator.right {
+    right: 24px;
+  }
+}
+.header .right-menu-vertical {
+  display: none; /*在非手机端默认隐藏水平菜单*/
+}
+@media (max-width: 768px) {
+  .header .right-menu-horizontal li {
+    display: none;
+  }
+  .header .right-menu-horizontal li.cart-icon {
+    display: inline-block; /*水平菜单只显示购物车图标*/
+    padding: 0;
+  }
+  .header .right-menu-horizontal li.cart-icon span {
+    font-size: 28px;
+  }
+  .header .right-menu-horizontal .cart-num {
+    right: -5px;
+    top: 5px;
+  }
+  .header .right-menu li {
+    font-size: 18px;
+  }
+  .header .right-menu-vertical {
+    display: block;
+  }
+  .header .right-menu-vertical .menu-list-wrap {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    border-top: 1px solid #d2d2d7;
+    background: #fff;
+    transition: all 1s ease-out;
+  }
+  .header .right-menu-vertical .menu-list-wrap.show {
+    display: block;
+  }
+  .header .right-menu-vertical ul {
+    padding: 0 25px;
+  }
+  .header .right-menu-vertical ul li {
+    line-height: 44px;
+    border-top: 1px solid #d2d2d7;
+    position: relative;
+    cursor: pointer;
+    display: block;
+  }
+  .header .right-menu-vertical ul li:first-child {
+    border-top: none;
+    height: 56px;
+  }
+  .header .right-menu-vertical ul li i {
+    font-size: 18px;
+    margin-right: 5px;
+  }
+  .header .right-menu-vertical li.search-wrap {
+    padding: 0;
+  }
+  .header .search-wrap > div {
+    position: relative;
+  }
+  .header .search-wrap input {
+    padding: 10px 40px;
+    min-height: 30px;
+    margin-top: 10px;
+  }
+  .header .search-wrap .search-wrap-icon.bi-search {
+    position: absolute;
+    left: 10px;
+    margin-top: 0;
+  }
+}

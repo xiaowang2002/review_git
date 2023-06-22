@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baby Housing 儿童用品网上商店-传统布局</title>
+<style>
+  /* base */
+  body {
+    font-size: 12px;
+    font-family: "Microsoft YaHei', '微软雅黑', 'PingFang SC', Arial, SimSun, sans-serif";;
+    line-height: 1.6;
+  }
+
+  body, ul, h1, h2, p {
+		margin: 0;
+		padding: 0;
+	}
+
+  ul li {
+		list-style-type: none;
+	}
+
+	a {
+		text-decoration: none;
+    color: #000;
+	}
+
+	p {
+		text-indent: 2em;
+	}
+
+	.container {
+		width: 760px;
+		margin: 0 auto;
+		position: relative;
+	}
+
+  h2 {
+    color: #069;
+    font-size: 22px;
+  }
+
+  .fl {
+    float: left;
+  }
+
+  .fr {
+    float: right;
+  }
+
+  /* 清除浮动 */
+  .clearfix:after {
+    content: ' ';
+    display: block;
+    height: 0;
+    clear: both;
+  }
+
+  .clearfix {
+    zoom: 1;
+  }
+
+  /* header */
+  .header {
+    font-size: 14px;
+  }
+
+  .header .top {
+    background: #bdd6e8;
+    height: 75px;
+  }
+
+  .header .logo-wrap span {
+    display: none;
+  }
+
+  .header .logo-wrap {
+    position: absolute;
+    top: 50%;
+    margin-top: -4px;
+  }
+
+  .header .logo-wrap > * {
+    display: inline-block;
+  }
+
+  .header .top-nav li {
+    display: inline-block;
+    width: 90px;
+    height: 25px;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+    background: #fff;
+    color: #3D81B4;
+    margin-left: 5px;
+    cursor: pointer;
+  }
+
+  .header .top-nav li:hover {
+    background: #e5bf73;
+    color: #fff;
+  }
+
+  .header .middle {
+    margin-top: 5px;
+    background-image: linear-gradient(#90bad9, #5c9ac8);
+    height: 35px;
+  }
+
+  .header .middle .middle-nav {
+    padding-top: 8px;
+  }
+
+  .header .middle .middle-nav li {
+    width: 84px;
+    height: 27px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 12px 12px 0 0;
+    margin-right: 10px;
+    line-height: 27px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .header .middle .middle-nav li.current {
+    background: #e5bf73;
+  }
+
+  .header .middle .middle-nav li:hover {
+    background: #e5bf73;
+    color: #3d81b4;
+  }
+
+  .header .middle .user-nav {
+    position: absolute;
+    right: 0;
+    top: -33px;
+  }
+
+  .header .middle .user-nav li {
+    display: inline-block;
+    width: 89px;
+    height: 96px;
+    border: 2px solid #fff;
+    background-image: linear-gradient(#a5c9e2, #fff);
+    font-weight: 700;
+    color: #196eb9;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .header .middle .user-nav li:hover {
+    background-image: linear-gradient(#c6ddec, #fff);
+  }
+
+  .header .middle .user-nav li:first-child {
+    border-radius: 15px 0 0 0;
+    box-shadow: -2px -2px 2px #a7cef3;
+  }
+
+  .header .middle .user-nav li:last-child {
+    border-radius: 0 15px 0 0;
+    margin-left: -7px;
+    box-shadow: 2px -2px 2px #a7cef3;
+  }
+
+  .header .middle .user-nav li img {
+    margin-top: 20px;
+  }
+
+  .header .middle .user-nav li span {
+    display: block;
+  }
+
+  .header .bottom {
+    height: 20px;
+    background-image: linear-gradient(#e2b966, #efd7a7);
+  }
+
+  /* main */
+  .main {
+    margin: 20px 0;
+  }
+
+  .main .main-left {
+    width: 540px;
+  }
+
+  .main .main-left .box h2 {
+    border-bottom: 1px solid #deaf50;
+    background: transparent url(images/rose.png) no-repeat bottom right;
+    margin: 20px 0;
+  }
+
+  .main .main-left .box img {
+    width: 210px;
+    height: 140px;
+    padding: 5px;
+    cursor: pointer;
+    background: #BDD6E8;
+    border: 1px #DEAF50 solid;
+  }
+
+  .main .main-left .box img:hover {
+    background: #3d81b4;
+    border: 1px solid #3d81b4;
+  }
+
+  .main .main-left .box .left-img img {
+    margin-right: 10px;
+  }
+
+  .main .main-left .box .right-img img {
+    margin-left: 10px;
+  }
+
+  .main .main-left .box .right-img p {
+    /* width: 290px; */
+  }
+
+  .main .main-left .box.classified-recommendation .cont-wrap li {
+    float: left;
+    width: 33.33%;
+    text-align: center;  
+  }
+
+  .main .main-left .box.classified-recommendation .cont-wrap img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .main .main-right {
+    width: 186px;
+  }
+  
+  .main .main-right .box {
+    border: 2px solid #e0eef4;
+    border-radius: 15px;
+    margin-top: 20px;
+  }
+
+  .main .main-right .box .inner-box {
+    background: #bdd6e8;
+    border: 2px solid #fff;
+    border-radius: 15px;
+  }
+
+  .main .main-right .box:first-child .inner-box {
+    padding: 12px 0;
+    text-align: center;
+  }
+
+  .main .main-right .box .inner-box input {
+    width: 136px;
+  }
+
+  .main .main-right .box:first-child .inner-box button {
+    display: block;
+    margin: 12px auto 0 auto;
+    cursor: pointer;
+  }
+
+  .main .main-right .product-category h2 {
+    text-align: center;
+  }
+
+  .main .main-right .product-category ul {
+    padding: 0 4px;
+  }
+
+  .main .main-right .product-category li a {
+    display: block;
+    padding-left: 35px;
+    line-height: 24px;
+    color: #3D81B4;
+    border-top: 1px #fff solid;
+    background: transparent url(images/menu-bullet.png) no-repeat 10px center;
+    font-size: 14px;
+  }
+
+  .main .main-right .product-category li:hover {
+    background: #fff;
+  }
+
+  .main .main-right .tip h2 {
+    text-align: center;
+  }
+
+  .main .main-right .tip .inner-box {
+    padding: 10px;
+  }
+
+  .main .main-right .tip p {
+    margin: 10px 0;
+  }
+
+
+  /* footer */
+  .footer {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .footer .top {
+    line-height: 25px;
+    background-image: linear-gradient(#90bad9, #5c9ac8);
+    color: #fff;
+  }
+
+  .footer .bottom {
+    line-height: 30px;
+    background-image: linear-gradient(#e2b966, #efd7a7);
+  }
+
+</style>
+</head>
+<body>
+  <div class="header">
+    <div class="top">
+      <div class="container clearfix">
+        <div class="logo-wrap fl">
+          <div class="logo"><img src="images/logo.gif" /></div>
+          <h1>
+            <span>Baby Housing</span>
+            <img src="./images/title.png" alt="">
+          </h1>
+        </div>
+        <ul class="top-nav fr">
+          <li class="current">关于我们</li>
+          <li>联系方式</li>
+          <li>意见建议</li>
+        </ul>
+      </div>
+    </div>
+    <div class="middle">
+      <div class="container">
+        <ul class="middle-nav">
+          <li class="current">网站首页</li>
+          <li>产品介绍</li>
+          <li>信息</li>
+          <li>畅销排行榜</li>
+        </ul>
+        <ul class="user-nav">
+          <li>
+            <img src="./images/account.png" alt=""><span>登录帐号</span>
+          </li>
+          <li>
+            <img src="./images/cart2.png" alt=""><span>购物车</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom"></div>
+  </div>
+
+  <div class="main">
+    <div class="container clearfix">
+      <div class="main-left fl">
+        <div class="box">
+          <h2>今日推荐</h2>
+          <div class="left-img cont-wrap clearfix">
+            <img class="fl" src="images/ex4.jpg" alt="">
+            <div>
+              <p>七星瓢虫图案4件套，采用超柔和进口面料，手感极其柔软、舒适。采用高支高密精梳纯棉织物作为面料，手感柔软舒适，经久耐用，多款图案风格能够和不同家居设计完美搭配。</p>
+              <p>缩水率以及退色率均符合国家检测标准，绿色环保。30度以下水温洗衣机弱洗，中性洗涤剂，中温熨烫。 </p>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <h2>最受欢迎</h2>
+          <div class="right-img cont-wrap clearfix">
+            <img class="fr" src="images/ex5.jpg" alt="">
+            <p>九孔棉冬被选用优质涤纶面料，手感柔软、花型独特，填充料采用高科技的聚酯螺旋纤维精致而成，该纤维细如发，弹性极强。且饱含空气，恒温性强，使您倍感轻软舒适。经特殊工艺加工后，长期保持松软如新，为您提供健康舒适的睡眠需要。 </p>
+          </div>
+        </div>
+        <div class="box classified-recommendation">
+          <h2>分类推荐</h2>
+          <ul class="cont-wrap clearfix">
+            <li>
+              <img src="images/ex1.jpg" alt="">
+              <p>休闲款式，柔软富有弹性。舒服自然，飘逸聪颖。</p>
+            </li>
+            <li>
+              <img src="images/ex2.jpg" alt="">
+              <p>棒球套装，柔软富有弹性。舒服自然，飘逸聪颖。</p>
+            </li>
+            <li>
+              <img src="images/ex3.jpg" alt="">
+              <p>丝制面料，柔软富有弹性。舒服自然，飘逸聪颖。</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="main-right fr">
+        <div class="box">
+          <div class="inner-box">
+            <input type="text">  
+            <button>查询商品</button>
+          </div>
+        </div>
+        <div class="box product-category">
+          <div class="inner-box">
+            <h2>产品分类</h2>
+            <ul>
+              <li><a href="javascript:void(0);">0-1岁玩具</a></li>
+              <li><a href="javascript:void(0);">2-3岁玩具</a></li>
+              <li><a href="javascript:void(0);">4-6岁玩具</a></li>
+              <li><a href="javascript:void(0);">0-1岁玩具</a></li>
+              <li><a href="javascript:void(0);">2-3岁玩具</a></li>
+              <li><a href="javascript:void(0);">4-6岁玩具</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="box tip">
+          <div class="inner-box">
+            <h2>特别提示</h2>
+            <p>特别提示特别提示特别提示特别提示</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="top">
+      <span>网站首页 | </span>
+      <span>产品介绍 | </span>
+      <span>信息 | </span>
+      <span>畅销排行榜</span>
+    </div>
+    <div class="bottom">版权属于前沿科技 artech.cn</div>
+  </div>
+</body>
+</html>

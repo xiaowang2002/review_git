@@ -1,0 +1,71 @@
+.header .right-menu-vertical {
+  display: none; /*在非手机端默认隐藏水平菜单*/
+}
+@media (max-width: 768px) {
+  .header .right-menu-horizontal li {
+    display: none;
+  }
+  .header .right-menu-horizontal li.cart-icon {
+    display: inline-block; /*水平菜单只显示购物车图标*/
+    padding: 0;
+  }
+  .header .right-menu-horizontal li.cart-icon span {
+    font-size: 28px;
+  }
+  .header .right-menu-horizontal .cart-num {
+    right: -5px;
+    top: 5px;
+  }
+  .header .right-menu li {
+    font-size: 18px;
+  }
+  .header .right-menu-vertical {
+    display: block;
+  }
+  .header .right-menu-vertical .menu-list-wrap {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    border-top: 1px solid #d2d2d7;
+    background: #fff;
+    transition: all 1s ease-out;
+  }
+  .header .right-menu-vertical .menu-list-wrap.show {
+    display: block;
+  }
+  .header .right-menu-vertical ul {
+    padding: 0 25px;
+  }
+  .header .right-menu-vertical ul li {
+    line-height: 44px;
+    border-top: 1px solid #d2d2d7;
+    cursor: pointer;
+    display: block;
+  }
+  .header .right-menu-vertical ul li:first-child {
+    border-top: none;
+    height: 56px;
+  }
+  .header .right-menu-vertical ul li i {
+    font-size: 18px;
+    margin-right: 5px;
+  }
+  .header .right-menu-vertical li.search-wrap {
+    padding: 0;
+  }
+  .header .search-wrap > div {
+    position: relative;
+  }
+  .header .search-wrap input {
+    padding: 10px 40px;
+    min-height: 30px;
+    margin-top: 10px;
+  }
+  .header .search-wrap .search-wrap-icon.bi-search {
+    position: absolute;
+    left: 10px;
+    margin-top: 0;
+  }
+}

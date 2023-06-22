@@ -1,0 +1,15 @@
+@media (max-width: 1024px) {
+  .body {
+    font-size: 16px;          /*调小字号*/
+  }
+  .header .menu .nav-home{
+    display: none !important; /*隐藏首页链接*/
+  }
+  .header .menu .logo {
+    background: url(images/logo-mini.png) no-repeat; /*替换Logo*/
+    width: 35px;
+    height: 35px;
+    background-size: contain;
+    background-position: 50%;
+  }
+}

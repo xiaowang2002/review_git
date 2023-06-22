@@ -1,0 +1,18 @@
+.header {
+  position: fixed; /*header固定在顶部*/
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 100px;
+  padding: 26px 15px;
+  background-color: #fff;
+  box-shadow: 0 2px 12px hsla(0, 0%, 52.9%, 0.1); /*加一些阴影效果*/
+}
+
+.header .menu .logo {
+  background: url(images/logo.png) no-repeat;
+  width: 125px;
+  height: 47px;
+  margin: 0 10px;
+}

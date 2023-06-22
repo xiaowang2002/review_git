@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>网格布局实验-使用网格线名称定位</title>
+  <style>
+body {
+  font-size: 12px;
+  margin: 2rem;
+}
+.container {
+  display: grid;
+  grid-template-rows: [top1] 80px [top2] 80px [middle] 80px [bottom2] 80px [bottom1];
+  grid-template-columns: [left1] 1fr [left2] 1fr [left3] 1fr [right3] 1fr [right2] 1fr [right1];
+  border: 1px solid #000;
+  width: 500px;
+}
+.item-1 {
+  grid-column-start: left1;
+  grid-column-end: right3;
+  grid-row-start: top1;
+  grid-row-end: bottom2;
+}
+
+/* .item-1 {
+  grid-column: 1 / span 3;
+  grid-row: 1 / 4;
+}
+.item-1 {
+  grid-column: left1 / right3;
+  grid-row: 1 / span 3;
+}
+.item-1 {
+  grid-area: 1 / 1 / 4 / 4;
+} */
+
+.item-2 {
+  grid-column-start: right3;
+  grid-column-end: span right1;
+  grid-row-start: 3;
+  grid-row-end: 5;
+}
+.item-3 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+.container .item {
+  margin: 5px;
+  background: tomato;
+  line-height: 70px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: center;
+}
+  </style>
+</head>
+<body class="container">
+  <div class="item item-1">1</div>
+  <div class="item item-2">2</div>
+  <div class="item item-3">3</div>
+  <div class="item item-4">4</div>
+  <div class="item item-5">5</div>
+  <div class="item item-6">6</div>
+  <div class="item item-7">7</div>
+</body>
+</html>

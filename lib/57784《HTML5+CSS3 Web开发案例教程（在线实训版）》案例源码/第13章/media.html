@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <title>留言布局-嵌套布局</title>
+  <style>
+.media {
+  display: flex;
+  align-items: flex-start;
+  max-width: 600px;
+  border: 1px solid #f2f2f2;
+}
+.media-object {
+  margin-right: 15px;
+}
+.media-body {
+  flex: 1;
+}
+.media-body > h5 {
+  font-size: 1.25em;
+  font-weight: 500;
+  background: #BBBBBD;
+  margin: 0;
+}
+.media-body > p {
+  min-height: 100px;
+  background: #BBBBBD;
+}
+
+.media.reverse > .media-object{
+  order: 1;
+  margin-left: 15px;
+  margin-right: 0;
+}
+  </style>
+</head>
+<body>
+  <!--嵌套 -->
+  <div class="media">
+    <img src="images/64.gif" class="media-object">
+    <div class="media-body">
+      <h5 class="media-heading">&nbsp;</h5>
+      <p></p>
+      <div class="media">
+        <img src="images/64.gif" class="media-object">
+        <div class="media-body">
+          <h5 class="media-heading">&nbsp;</h5>
+          <p></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

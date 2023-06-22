@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+* {
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+}
+.container .row>.col, .container .row>[class^="col-"] {
+  padding: 1rem;
+  background-color: rgba(86,61,124,0.15);
+  border: 1px solid rgba(86,61,124,0.2);
+  font-size: 1.25rem;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.col-sm-6 {
+  flex: 0 0 50%; /* 6 ÷ 12 */
+}
+@media (min-width: 768px) {
+  .col-md-2 {
+    flex: 0 0 16.666667%; /* 2 ÷ 12 */
+  }
+}
+@media (min-width: 1200px) {
+  .col-xl-1 {
+    flex: 0 0 8.333333%;  /* 1 ÷ 12 */
+  }
+}
+  </style>
+  <title>响应式栅格系统</title>
+
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-md-2 col-xl-1">col 1</div>
+      <div class="col-sm-6 col-md-2 col-xl-1">col 2</div>
+      <div class="col-sm-6 col-md-2 col-xl-1">col 3</div>
+      <div class="col-sm-6 col-md-2 col-xl-1">col 4</div>
+      <div class="col-sm-6 col-md-2 col-xl-1">col 5</div>
+      <div class="col-sm-6 col-md-2 col-xl-1">col 6</div>
+      <div class="col-sm-6 col-md-2 col-xl-1">col 7</div>
+      <div class="col-sm-6 col-md-2 col-xl-1">col 8</div>
+      <div class="col-sm-6 col-md-2 col-xl-1">col 9</div>
+      <div class="col-sm-6 col-md-2 col-xl-1">col 10</div>
+      <div class="col-sm-6 col-md-2 col-xl-1">col 11</div>
+      <div class="col-sm-6 col-md-2 col-xl-1">col 12</div>
+      <div class="col-sm-6 col-md-2 col-xl-1">col 13</div>
+    </div>
+  </div>
+</body>
+</html>

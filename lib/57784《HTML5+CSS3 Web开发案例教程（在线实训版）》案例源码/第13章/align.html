@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <title>水平垂直居中对齐</title>
+  <style>
+body {
+  padding: 0;
+  margin: 0;
+}
+.container {
+  display: flex;        /*设为 flexbox */
+  flex-direction: row;  /*主轴方向设为水平，并且换行*/
+  background-color: #F89427;
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.item {
+  border: 0.5px solid #3a3a3a;
+}
+  </style>
+</head>
+<body class="container">
+  <div class="item">水平垂直居中</div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>通用导航栏-垂直布局</title>
+  <style>
+ul {
+  list-style: none;
+  margin: 0; 
+  padding: 0;
+}
+.nav {
+  display: flex;        /*设为 flexbox */
+  flex-direction: row;  /*主轴方向设为水平*/
+  padding-left: 20px;
+  padding-right: 20px;
+  background: #343a40;
+}
+
+.nav a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  color: #fff;
+}
+
+.nav .login {
+  margin-left: auto;
+}
+
+.nav a:hover {
+  background: #1565C0;
+}
+
+@media all and (max-width: 600px) {
+  .nav {
+    flex-direction: column; /*改变主轴的方向，变为纵向*/
+    padding: 0;
+  }
+  .nav .login {
+    margin-left: unset;
+  }
+  .nav a { 
+    text-align: center; 
+    padding: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3); 
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+  }
+  .nav li:last-of-type a {
+    border-bottom: none;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <ul class="nav">
+    <li><a href="javascript:void(0);">首页</a></li>
+    <li><a href="javascript:void(0);">图书</a></li>
+    <li><a href="javascript:void(0);">资源</a></li>
+    <li><a href="javascript:void(0);">联系我们</a></li>
+    <li class="login"><a href="javascript:void(0);">登录/注册</a></li>
+  </ul>
+</body>
+</html>

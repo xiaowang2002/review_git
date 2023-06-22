@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <style>
+* {
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  max-width: 1140px;
+  margin: auto;
+}
+.container .row>.col, .container .row>[class^="col-"] {
+  padding: .75rem;
+  background-color: rgba(86,61,124,0.15);
+  border: 1px solid rgba(86,61,124,0.2);
+}
+.container .row+.row {
+  margin-top: 1rem;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.col {
+  flex: 1 0 0;
+}
+.col-6 {
+  flex: 0 0 50%;
+}
+.col-5 {
+  flex: 0 0 41.666667%;
+}
+.col-4 {
+  flex: 0 0 33.333333%;
+}
+.col-3 {
+  flex: 0 0 25%;
+}
+  </style>
+  <title>仿Bootstrap栅格系统-占多列2</title>
+
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-3">col-3</div>
+      <div class="col-4">col-4</div>
+      <div class="col-5">col-5</div>
+    </div>
+    <div class="row">
+      <div class="col">col</div>
+      <div class="col-6">col-6</div>
+      <div class="col">col</div>
+    </div>
+  </div>
+</body>
+</html>

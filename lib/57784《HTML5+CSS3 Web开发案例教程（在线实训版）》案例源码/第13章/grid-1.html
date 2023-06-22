@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <style>
+.container {
+  width: 100%;
+  max-width: 1140px;
+  margin: auto;
+}
+.container .row>.col {
+  padding: .75rem;
+  background-color: rgba(86,61,124,0.15);
+  border: 1px solid rgba(86,61,124,0.2);
+}
+.container .row+.row {
+  margin-top: 1rem;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.col {
+  flex: 1 0 0;
+}
+  </style>
+  <title>仿Bootstrap栅格系统-等宽列</title>
+
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col">两等分</div>
+      <div class="col">两等分</div>
+    </div>
+    <div class="row">
+      <div class="col">三等分</div>
+      <div class="col">三等分</div>
+      <div class="col">三等分</div>
+    </div>
+  </div>
+</body>
+</html>

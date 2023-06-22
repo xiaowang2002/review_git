@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <title>flex实验-“flex-grow”份数不同</title>
+  <style>
+.container {
+  display: flex;        /*设为 flexbox */
+  flex-direction: row;  /*主轴方向设为水平*/
+  width: 300px;
+  border: 1px solid #000;
+}
+.item {
+  width: 20px;
+  flex-basis: auto;
+  flex-grow: 1;
+}
+.item1 {
+  background-color: #A2CBFA;
+}
+.item2 {
+  background-color: #F89427;
+}
+.item3 {
+  background-color: #EC7272;
+  flex-grow: 2;
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item item1">1</div>
+    <div class="item item2">2</div>
+    <div class="item item3">3</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>倾斜元素演示</title>
+  <style>
+.skewX{
+  transform: skewX(30deg);
+}
+.skewY{
+  transform: skewY(30deg);
+}
+.skew{
+  transform: skew(30deg, 20deg);
+}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="box">
+      <div class="blue skewX">水平方向倾斜</div>
+    </div>
+    <div class="box">
+      <div class="blue skewY">垂直方向倾斜</div>
+    </div> 
+    <div class="box">
+      <div class="blue skew">都倾斜</div>
+    </div>
+  </div>
+</body>
+</html>

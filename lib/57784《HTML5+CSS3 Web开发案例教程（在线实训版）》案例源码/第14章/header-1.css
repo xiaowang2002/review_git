@@ -1,0 +1,36 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+body {
+  font-family: Libre Franklin,Helvetica,Arial,sans-serif!important;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.7;
+  padding-right: 0!important;
+}
+ul, ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  color: #888;
+  text-decoration: none;
+}
+.header .menu {
+  display: flex;        /*设为flex布局*/
+  align-items: center;  /*垂直居中对齐*/
+  justify-content: space-between; /*水平方向两端对齐*/
+}
+.header .left-menu {
+  display: flex;
+  align-items: center;
+}
+.header .menu-list li {
+  padding: 0 10px;
+  display: inline-block;  /*每个li设成行内元素*/
+  cursor: pointer;        /*设置鼠标样式为指针*/
+}

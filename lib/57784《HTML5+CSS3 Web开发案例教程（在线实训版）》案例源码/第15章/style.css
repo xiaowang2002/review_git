@@ -1,0 +1,22 @@
+
+.wrap{
+  margin: 20px 50px;
+  width: 620px;
+  font-family: sans-serif;
+}
+.box{
+  display: inline-block;
+  width: 130px;
+  height: 130px;
+  background: grey;
+  margin-top: 60px;
+  margin-right: 70px; 
+  cursor: pointer;
+  color:white;
+  text-align: center;
+}
+.blue{
+  width: 130px;
+  height: 130px;
+  background-color: rgba(83, 214, 148, 0.5);
+}

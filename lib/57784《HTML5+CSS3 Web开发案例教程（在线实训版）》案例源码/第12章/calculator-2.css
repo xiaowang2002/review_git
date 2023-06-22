@@ -1,0 +1,31 @@
+.calculator-keys {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.all-clear {
+  grid-area: 1 / 1 / 2 / 3;
+}
+
+.plus {
+  grid-area: 3 / 4 / 4 / 5;
+}
+.minus {
+  grid-area: 3 / 5 / 4 / 6;
+}
+.multiply {
+  grid-area: 2 / 5 / 3 / 6;
+}
+.divide {
+  grid-area: 2 / 4 / 3 / 5;
+}
+.zero {
+  grid-area: 5 / 1 / 6 / 3;
+}
+
+.equal-sign {
+  grid-area: 4 / 4 / 6 / 6;
+  height: 100%;
+}

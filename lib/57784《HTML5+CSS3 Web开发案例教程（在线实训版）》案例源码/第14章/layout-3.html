@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+.container {
+  color: #fff;
+  background: #eaeaed;
+  width: 100%;
+  border: 1px solid tomato;
+  display: flex;
+}
+main, aside {
+  background: tomato;
+  padding: 20px 0;
+  margin: 0.833333%;  /* 10 ÷ 1200 */
+  text-align: center;
+}
+main {
+  flex: 0 0 66.666667%;
+}
+aside {
+  flex: 0 0 30%;
+}
+  </style>
+  <title>弹性布局-flexbox</title>
+</head>
+<body>
+  <div class="container">
+    <main>内容区</main>
+    <aside>侧边栏</aside>
+  </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>变换原点演示</title>
+  <style>
+.scale{
+  transform-origin: bottom left; /*原点为左下角*/
+  transform: scale(.5);
+}
+.rotate1{
+  transform-origin: 0 0;         /*原点为左上角*/
+  transform: rotate(45deg);
+}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="box">
+      <div class="blue scale">缩小</div>
+    </div>
+    <div class="box">
+      <div class="blue rotate1">顺时针旋转</div>
+    </div>
+  </div>
+</body>
+</html>
